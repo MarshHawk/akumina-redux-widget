@@ -15,8 +15,8 @@ const StoryDiv = styled.div`
 margin-bottom: 8px;
 border: 12px solid #001f3f;
 background-color: #7FDBFF;
-border-radius: 8%;
-padding: 8px;
+border-radius: 24%;
+padding: 16px;
 `
 
 const StoryTitle = styled.h3`

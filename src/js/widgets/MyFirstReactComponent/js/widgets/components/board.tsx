@@ -29,7 +29,7 @@ interface BoardProps {
 }
 
 const Board: React.SFC<BoardProps> = ({ columns }) => (
-  <DragDropContext onDragEnd={() => console.log('TODO: onDragEnd')}>
+  <DragDropContext onDragEnd={(result) => console.log(JSON.stringify(result)+ '  ' + JSON.stringify(typeof(result)))}>
   <BoardStyle><BoardTitle>Kanban POC</BoardTitle>{columns.map((c, i) => <ColumnContainer key={c.id} column={c} />)}</BoardStyle>
   </DragDropContext>
 )
