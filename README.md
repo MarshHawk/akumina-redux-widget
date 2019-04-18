@@ -105,13 +105,16 @@ To initiate the deployment process which will call the Site Deployer use the fol
 npm run deploy 
 ```
 
-
-
 This should have deployed a layout, a page and a sample 'MyFirstReactComponent'
 Browse to http://{tenant}.sharepoint.com/sites/{sitecolllection}/pages/sandbox.aspx
 
 #### References
 
-(Colors)[https://clrs.cc/]
 (react-beautiful-dnd)[https://github.com/atlassian/react-beautiful-dnd]
 (emotion-js)[https://github.com/emotion-js/emotion/blob/master/docs/typescript.md]
+(dotenv)[https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786]
+(react-redux-types-script-guide)[https://github.com/piotrwitek/react-redux-typescript-guide]
+(react-redux-typescript-example)[https://github.com/resir014/react-redux-typescript-example]
+(Get started with Redux concepts)[https://redux.js.org/basics/]
+(Check out taigaio!)[https://taigaio.github.io]
+(Colors)[https://clrs.cc/]

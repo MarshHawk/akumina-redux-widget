@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { initStore } from './store/index';
 import { demoInitialUserStories, columns } from './store/initialStateStaticApi';
 import { BoardContainer } from './containers/boardContainer';
+import '@atlaskit/css-reset';
 
 interface IMyFirstReactComponentState {
     pageLifecycleComplete: boolean,
@@ -52,7 +53,7 @@ export class MyFirstReactComponent extends React.Component<IMyFirstReactComponen
         if (this.state.pageLifecycleComplete) {
             return (
                 <div>
-                    <p>Redux will render again</p>
+                    <p>Redux with cards</p>
                     <Provider store={initStore({userStories: demoInitialUserStories, columns:columns})}><BoardContainer /></Provider>
                 </div>
             );

@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Column } from '../models/board';
 import styled from '@emotion/styled'
 import { UserStory } from '../models/blocks';
+import StoryCard from './storyCard';
 
 //#001f3f Navy
 //#7FDBFF Aqua
@@ -16,7 +17,7 @@ margin: 8px;
 border: 1px #111111;
 `
 
-const ColumnTitle = styled.h3`
+const ColumnTitle = styled.h2`
 padding: 8px;
 color: #DDDDDD
 text-transform: uppercase;
@@ -26,14 +27,16 @@ const CardsContainer = styled.div`
 padding: 8px;
 border: 1px #111111;
 `
-
 interface ColumnProps {
-    column: Column,
-    //stories: UserStory[]
-  }
+  columnTitle: string,
+  columnStories: UserStory[]
+}
 
-const ColumnComponent: React.SFC<ColumnProps> = ({ column }) => (
-    <ColumnDiv><ColumnTitle>{column.title}</ColumnTitle><CardsContainer></CardsContainer></ColumnDiv>
+const ColumnComponent: React.SFC<ColumnProps> = ({ columnTitle, columnStories }) => (
+    <ColumnDiv
+    ><ColumnTitle>{columnTitle}</ColumnTitle>
+    <CardsContainer>{columnStories.map(s => <StoryCard key={s.id} story={s} />)}</CardsContainer>
+    </ColumnDiv>
 )
 
 export default ColumnComponent

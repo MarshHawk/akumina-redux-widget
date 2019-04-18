@@ -2,7 +2,8 @@
 import * as React from 'react';
 import { Column } from '../models/board';
 import styled from '@emotion/styled'
-import ColumnComponent from './columnComponent';
+import '@atlaskit/css-reset';
+import { ColumnContainer } from '../containers/columnContainer';
 
 //#001f3f Navy
 //#7FDBFF Aqua
@@ -18,7 +19,7 @@ background-color: #85144b;
 
 const BoardTitle = styled.h1`
 text-align: center;
-color:white;
+color:#FFFFFF;
 `
 
 interface BoardProps {
@@ -26,7 +27,7 @@ interface BoardProps {
 }
 
 const Board: React.SFC<BoardProps> = ({ columns }) => (
-  <BoardStyle><BoardTitle>Kanban POC</BoardTitle>{columns.map((c, i) => <ColumnComponent column={c} />)}</BoardStyle>
+  <BoardStyle><BoardTitle>Kanban POC</BoardTitle>{columns.map((c, i) => <ColumnContainer key={c.id} column={c} />)}</BoardStyle>
 )
 
 export default Board
