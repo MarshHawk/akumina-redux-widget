@@ -1,6 +1,7 @@
 //import React from 'react'
 import * as React from 'react';
 import styled from '@emotion/styled'
+import { Draggable } from 'react-beautiful-dnd'
 import { UserStory } from '../models/blocks';
 
 //#001f3f Navy
@@ -12,37 +13,39 @@ import { UserStory } from '../models/blocks';
 //Purple #B10DC9
 const StoryDiv = styled.div`
 margin-bottom: 8px;
-border: 4px #B10DC9;
+border: 12px solid #001f3f;
 background-color: #7FDBFF;
-border-radius: 16%;
+border-radius: 8%;
 padding: 8px;
 `
 
 const StoryTitle = styled.h3`
-padding: 8px;
 color: #001f3f;
 `
 
 const StoryOwner = styled.h4`
-padding: 8px;
 color: #001f3f;
 `
 
 const StoryPoints = styled.span`
-padding: 4px;
 color: #001f3f;
-border: 1px #DDDDDD;
+border: 1px #85144b;
 `
 
 interface StoryCardProps {
   story: UserStory,
+  index: number
 }
 
-const StoryCard: React.SFC<StoryCardProps> = ({ story }) => (
-    <StoryDiv><StoryTitle>{story.subject}</StoryTitle>
+const StoryCard: React.SFC<StoryCardProps> = ({ story, index }) => (
+    <Draggable draggableId={story.id+''} index={index}>
+    {(provided) => (
+        <StoryDiv ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}><StoryTitle>{story.subject}</StoryTitle>
     <StoryOwner>{story.owner}</StoryOwner>
     <StoryPoints> {story.points}</StoryPoints>
     </StoryDiv>
+    )}
+    </Draggable>
 )
 
 export default StoryCard

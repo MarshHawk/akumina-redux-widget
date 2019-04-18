@@ -53,7 +53,7 @@ export class MyFirstReactComponent extends React.Component<IMyFirstReactComponen
         if (this.state.pageLifecycleComplete) {
             return (
                 <div>
-                    <p>Redux with cards</p>
+                    <p>Redux first drag with style</p>
                     <Provider store={initStore({userStories: demoInitialUserStories, columns:columns})}><BoardContainer /></Provider>
                 </div>
             );
