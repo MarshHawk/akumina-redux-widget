@@ -2,7 +2,8 @@ import * as Akumina from 'akumina-core';
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import { initStore } from './store/index';
-import { demoInitialUserStories } from './store/stateTypes';
+import { demoInitialUserStories, columns } from './store/initialStateStaticApi';
+import { BoardContainer } from './containers/columnContainer';
 
 interface IMyFirstReactComponentState {
     pageLifecycleComplete: boolean,
@@ -51,10 +52,8 @@ export class MyFirstReactComponent extends React.Component<IMyFirstReactComponen
         if (this.state.pageLifecycleComplete) {
             return (
                 <div>
-                    <p>mycustomprop: {this.props.mycustomprop}</p>
-                    <p>testIncrement: {this.state.testIncrement}</p>
-                    <input type="button" onClick={this.Increment} value="Increment Test"></input>
-                    <Provider store={initStore({userStories: demoInitialUserStories})}><div>Hello Again!</div>></Provider>
+                    <p>Redux will render</p>
+                    <Provider store={initStore({userStories: demoInitialUserStories, columns:columns})}><BoardContainer /></Provider>
                 </div>
             );
         } else {

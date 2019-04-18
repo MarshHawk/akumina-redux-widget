@@ -1,5 +1,5 @@
 import { Reducer } from 'redux'
-import { UserStory } from '../store/stateTypes'
+import { UserStory } from '../models/blocks'
 
 export const initialStory: UserStory = {
     id: 0,

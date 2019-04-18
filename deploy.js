@@ -23,9 +23,10 @@ options.push("widgets");
 //options.push("fonts");
 
 
+
 var args = {
     "options": options.toString(),
-    "envdir": "C:\\GitHub\\AkuminaDev\\akumina-redux-widget\\build\\",
+    "envdir": "C:\\GitHub\\akumina-redux-widget\\build\\",
     "assetdirectory": "MyClient",
     "spdirectory": "DigitalWorkplace",
     "spurl": spUrlDev,
