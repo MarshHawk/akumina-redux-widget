@@ -1,13 +1,15 @@
 import { KanbanState } from "../store";
 import { connect } from 'react-redux';
-import Board from "../components/board";
+import ColumnComponent from "../components/columnComponent";
+import { Column } from "../models/board";
 
-const mapStateToProps = (state: KanbanState) => ({
-    columns: state.columns
+const mapStateToProps = (state: KanbanState, props: Column) => ({
+    columnTitle: props.title,
+    columnStories: props.blockIds.map(i => state.userStories.filter((e) => e.id === i)[0])
   });
   
   
-export const BoardContainer = connect(
+export const ColumnContainer = connect(
     mapStateToProps,
     null
-  )(Board);
+  )(ColumnComponent);

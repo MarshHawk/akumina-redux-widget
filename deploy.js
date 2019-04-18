@@ -1,15 +1,13 @@
 var exeCute = require('exe');
-
+const dotenv = require('dotenv');
+dotenv.config();
 
 var options = [];
-
 
 options.push("layouts");
 options.push("pages");
 options.push("controls");
 options.push("widgets");
-
-
 
 //options.push("masterpage");
 //options.push("js");
@@ -22,16 +20,14 @@ options.push("widgets");
 //options.push("homepage");
 //options.push("fonts");
 
-
-
 var args = {
     "options": options.toString(),
     "envdir": "C:\\GitHub\\akumina-redux-widget\\build\\",
     "assetdirectory": "MyClient",
     "spdirectory": "DigitalWorkplace",
-    "spurl": spUrlDev,
-    "spuser": spUserDev,
-    "sppassword": spPassDev
+    "spurl": process.env.SP_URL_DEV,
+    "spuser": process.env.SP_USER_DEV,
+    "sppassword": process.env.SP_PASS_DEV
 };
 
 //use extra parameters if deploying different language widgets

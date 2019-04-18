@@ -109,3 +109,9 @@ npm run deploy
 
 This should have deployed a layout, a page and a sample 'MyFirstReactComponent'
 Browse to http://{tenant}.sharepoint.com/sites/{sitecolllection}/pages/sandbox.aspx
+
+#### References
+
+(Colors)[https://clrs.cc/]
+(react-beautiful-dnd)[https://github.com/atlassian/react-beautiful-dnd]
+(emotion-js)[https://github.com/emotion-js/emotion/blob/master/docs/typescript.md]

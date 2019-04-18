@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Provider } from 'react-redux';
 import { initStore } from './store/index';
 import { demoInitialUserStories, columns } from './store/initialStateStaticApi';
-import { BoardContainer } from './containers/columnContainer';
+import { BoardContainer } from './containers/boardContainer';
 
 interface IMyFirstReactComponentState {
     pageLifecycleComplete: boolean,
@@ -52,7 +52,7 @@ export class MyFirstReactComponent extends React.Component<IMyFirstReactComponen
         if (this.state.pageLifecycleComplete) {
             return (
                 <div>
-                    <p>Redux will render</p>
+                    <p>Redux will render again</p>
                     <Provider store={initStore({userStories: demoInitialUserStories, columns:columns})}><BoardContainer /></Provider>
                 </div>
             );
