@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import { Draggable } from "react-beautiful-dnd";
-import { UserStory } from "../models/blocks";
+import { IUserStory } from "../models/blocks";
 
 const StoryDiv = styled.div`
   margin-bottom: 8px;
@@ -25,12 +25,12 @@ const StoryPoints = styled.span`
   border: 1px #85144b;
 `;
 
-interface StoryCardProps {
-  story: UserStory;
+interface IStoryCardProps {
+  story: IUserStory;
   index: number;
 }
 
-const StoryCard: React.SFC<StoryCardProps> = ({ story, index }) => (
+const StoryCard: React.SFC<IStoryCardProps> = ({ story, index }) => (
   <Draggable draggableId={story.id + ""} index={index}>
     {provided => (
       <StoryDiv

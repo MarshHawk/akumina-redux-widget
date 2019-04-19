@@ -1,15 +1,14 @@
-import { KanbanState } from "../store";
+import { IKanbanState } from "../store";
 import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 import ColumnComponent from "../components/columnComponent";
-import { Column } from "../models/board";
-import { storyDropped } from '../actions'
+import { IColumn } from "../models/board";
 
 interface IColumnOwnProps {
-  column: Column
+  column: IColumn
 }
 
-const mapStateToProps = (state: KanbanState, props: IColumnOwnProps) => {
+const mapStateToProps = (state: IKanbanState, props: IColumnOwnProps) => {
   return ({
     column: props.column,
     columnStories: props.column.blockIds.map(i => state.userStories.filter((e) => e.id === i)[0])

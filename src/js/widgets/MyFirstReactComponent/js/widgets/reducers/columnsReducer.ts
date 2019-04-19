@@ -1,8 +1,8 @@
 import { Reducer } from 'redux'
-import { Column } from '../models/board'
+import { IColumn } from '../models/board'
 import constants from '../constants/actionTypes'
 
-export const columnsReducer: Reducer<Column[]> = (state = [], action) => {
+export const columnsReducer: Reducer<IColumn[]> = (state = [], action) => {
   switch (action.type) {
     case constants.STORY_DROPPED: {
       const { destination, source, draggableId } = action.payload.result;

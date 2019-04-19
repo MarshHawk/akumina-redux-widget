@@ -1,12 +1,12 @@
-import { KanbanState } from "../store";
+import { IKanbanState } from "../store";
 import { connect } from 'react-redux';
 import Board from "../components/board";
 import { storyDropped } from "../actions";
 import { bindActionCreators, Dispatch } from "redux";
 import { DropResult } from "react-beautiful-dnd";
-import { Column } from "../models/board";
+import { IColumn } from "../models/board";
 
-const mapStateToProps = (state: KanbanState) => ({
+const mapStateToProps = (state: IKanbanState) => ({
   columns: state.columns
 });
 
@@ -16,7 +16,7 @@ const mapStateToProps = (state: KanbanState) => ({
 //  }, dispatch);
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  storyDropped: (result: DropResult, columns: Column[]) => {
+  storyDropped: (result: DropResult, columns: IColumn[]) => {
     return dispatch(storyDropped(result, columns));
   }
 })

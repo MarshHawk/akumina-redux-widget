@@ -2,9 +2,9 @@
 import * as React from "react";
 import { Droppable } from "react-beautiful-dnd";
 import styled from "@emotion/styled";
-import { UserStory } from "../models/blocks";
+import { IUserStory } from "../models/blocks";
 import StoryCard from "./storyCard";
-import { Column } from "../models/board";
+import { IColumn } from "../models/board";
 
 const ColumnDiv = styled.div`
 margin: 8px;
@@ -27,12 +27,12 @@ const CardsContainer = styled.div`
   flex-grow: 1;
   min-height: 100px;
 `;
-interface ColumnProps {
-  column: Column;
-  columnStories: UserStory[];
+interface IColumnProps {
+  column: IColumn;
+  columnStories: IUserStory[];
 }
 
-const ColumnComponent: React.SFC<ColumnProps> = (
+const ColumnComponent: React.SFC<IColumnProps> = (
   { column, columnStories },
   { storyDropped }
 ) => (

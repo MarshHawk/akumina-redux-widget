@@ -1,7 +1,7 @@
 import { Reducer } from 'redux'
-import { UserStory } from '../models/blocks'
+import { IUserStory } from '../models/blocks'
 
-export const userStoryReducer: Reducer<UserStory[]> = (state = [], action) => {
+export const userStoryReducer: Reducer<IUserStory[]> = (state = [], action) => {
   switch (action.type) {
     case "TODO": {
       return state

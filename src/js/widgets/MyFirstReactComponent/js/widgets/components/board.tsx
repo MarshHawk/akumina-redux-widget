@@ -1,7 +1,7 @@
 //import React from 'react'
 import * as React from "react";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
-import { Column } from "../models/board";
+import { IColumn } from "../models/board";
 import styled from "@emotion/styled";
 import "@atlaskit/css-reset";
 import { ColumnContainer } from "../containers/columnContainer";
@@ -28,8 +28,8 @@ const CardBoardContainer = styled.div`
 `;
 
 interface BoardProps {
-  columns: Column[];
-  storyDropped: (result: DropResult, columns: Column[]) => void;
+  columns: IColumn[];
+  storyDropped: (result: DropResult, columns: IColumn[]) => void;
 }
 
 const Board: React.SFC<BoardProps> = ({ columns, storyDropped }) => (
