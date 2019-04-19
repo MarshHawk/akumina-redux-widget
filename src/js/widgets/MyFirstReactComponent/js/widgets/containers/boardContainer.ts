@@ -7,20 +7,21 @@ import { DropResult } from "react-beautiful-dnd";
 import { Column } from "../models/board";
 
 const mapStateToProps = (state: KanbanState) => ({
-    columns: state.columns
-  });
+  columns: state.columns
+});
 
+//TODO: try bindActionCreators: 
 //const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators({
 //  storyDropped: storyDropped,
 //  }, dispatch);
 
-  const mapDispatchToProps = (dispatch: Dispatch) => ({
-    storyDropped: (result: DropResult, columns: Column[]) => {
-      return dispatch(storyDropped(result,columns));
-    }
-  })
+const mapDispatchToProps = (dispatch: Dispatch) => ({
+  storyDropped: (result: DropResult, columns: Column[]) => {
+    return dispatch(storyDropped(result, columns));
+  }
+})
 
 export const BoardContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Board);
+  mapStateToProps,
+  mapDispatchToProps
+)(Board);

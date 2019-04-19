@@ -1,4 +1,4 @@
 export default {
-    // Column
-    STORY_DROPPED: 'STORY_DROPPED'
-  }
+  // Columns
+  STORY_DROPPED: 'STORY_DROPPED'
+}

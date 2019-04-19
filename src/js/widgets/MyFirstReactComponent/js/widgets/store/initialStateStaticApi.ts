@@ -1,5 +1,5 @@
 import { IUserStory } from '../models/blocks'
-import { IColumn  } from '../models/board'
+import { IColumn } from '../models/board'
 
 const story0: IUserStory = {
     id: 0,
@@ -83,14 +83,14 @@ export let demoInitialUserStories = [story0, story1, story2, story3, story4, sto
 const column0: IColumn = {
     id: 0,
     title: "Defined",
-    blockIds: [1,2,5,6],
+    blockIds: [1, 2, 5, 6],
     blockType: "UserStory"
 }
 
 const column1: IColumn = {
     id: 1,
     title: "In Progress",
-    blockIds: [0,4],
+    blockIds: [0, 4],
     blockType: "UserStory"
 }
 
