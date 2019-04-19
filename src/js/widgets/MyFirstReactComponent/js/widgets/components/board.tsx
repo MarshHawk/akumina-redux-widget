@@ -1,6 +1,6 @@
 //import React from 'react'
 import * as React from 'react';
-import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import { Column } from '../models/board';
 import styled from '@emotion/styled'
 import '@atlaskit/css-reset';
@@ -21,15 +21,16 @@ border-radius: 8%;
 
 const BoardTitle = styled.h1`
 text-align: center;
-color:#FFFFFF;
+color:#001f3f!important;
 `
 
 interface BoardProps {
-  columns: Column[]
+  columns: Column[],
+  storyDropped: (result: DropResult, columns: Column[]) => void;
 }
 
-const Board: React.SFC<BoardProps> = ({ columns }) => (
-  <DragDropContext onDragEnd={(result) => console.log(JSON.stringify(result)+ '  ' + JSON.stringify(typeof(result)))}>
+const Board: React.SFC<BoardProps> = ({ columns, storyDropped }) => (
+  <DragDropContext onDragEnd={(result) => storyDropped(result, columns)}>
   <BoardStyle><BoardTitle>Kanban POC</BoardTitle>{columns.map((c, i) => <ColumnContainer key={c.id} column={c} />)}</BoardStyle>
   </DragDropContext>
 )

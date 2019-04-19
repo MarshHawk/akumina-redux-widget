@@ -16,7 +16,6 @@ import { Column } from '../models/board';
 const ColumnDiv = styled.div`
 margin: 8px;
 border: 1px #111111;
-border-radius: 8%;
 `
 
 const ColumnTitle = styled.h2`

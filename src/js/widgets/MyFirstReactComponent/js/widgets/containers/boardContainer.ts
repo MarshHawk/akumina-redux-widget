@@ -15,8 +15,8 @@ const mapStateToProps = (state: KanbanState) => ({
 //  }, dispatch);
 
   const mapDispatchToProps = (dispatch: Dispatch) => ({
-    storyDropped: (result: DropResult, column: Column) => {
-      return dispatch(storyDropped(result,column));
+    storyDropped: (result: DropResult, columns: Column[]) => {
+      return dispatch(storyDropped(result,columns));
     }
   })
 

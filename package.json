@@ -10,7 +10,8 @@
     "clean": "akumina-widget-builder clean packages",
     "stub": "akumina-widget-builder stub",
     "config": "akumina-widget-builder config",
-    "deploy": "node ./deploy.js"
+    "deploy": "node ./deploy.js",
+    "all": "npm run clean & npm run build & npm run package & npm run deploy"
   },
   "author": "",
   "license": "ISC",
