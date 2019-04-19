@@ -6,16 +6,13 @@ import { UserStory } from '../models/blocks';
 import StoryCard from './storyCard';
 import { Column } from '../models/board';
 
-//#001f3f Navy
-//#7FDBFF Aqua
-//#85144b Maroon
-//SILVER #DDDDDD
-//GRAY #AAAAAA
-//BLACK #111111
-//Purple #B10DC9
 const ColumnDiv = styled.div`
 margin: 8px;
 border: 1px #111111;
+width 220px;
+
+display: flex;
+flex-direction: column;
 `
 
 const ColumnTitle = styled.h2`
@@ -27,6 +24,8 @@ text-transform: uppercase;
 const CardsContainer = styled.div`
 padding: 8px;
 border: 1px #111111;
+flex-grow: 1;
+min-height: 100px;
 `
 interface ColumnProps {
   column: Column,

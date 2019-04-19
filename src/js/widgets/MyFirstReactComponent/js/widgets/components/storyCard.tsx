@@ -1,26 +1,19 @@
-//import React from 'react'
 import * as React from 'react';
 import styled from '@emotion/styled'
 import { Draggable } from 'react-beautiful-dnd'
 import { UserStory } from '../models/blocks';
 
-//#001f3f Navy
-//#7FDBFF Aqua
-//#85144b Maroon
-//SILVER #DDDDDD
-//GRAY #AAAAAA
-//BLACK #111111
-//Purple #B10DC9
 const StoryDiv = styled.div`
 margin-bottom: 8px;
-border: 12px solid #001f3f;
+border: 2px solid #001f3f;
 background-color: #7FDBFF;
-border-radius: 24%;
+border-radius: 4%;
 padding: 16px;
 `
 
 const StoryTitle = styled.h3`
 color: #001f3f;
+text-align: center;
 `
 
 const StoryOwner = styled.h4`

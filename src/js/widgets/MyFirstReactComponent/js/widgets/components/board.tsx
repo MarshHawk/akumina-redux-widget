@@ -16,12 +16,15 @@ import { ColumnContainer } from '../containers/columnContainer';
 const BoardStyle = styled.div`
 border: 2px solid #AAAAAA;
 background-color: #DDDDDD;
-border-radius: 8%;
 `
 
 const BoardTitle = styled.h1`
 text-align: center;
 color:#001f3f!important;
+`
+
+const CardBoardContainer = styled.div`
+display:flex;
 `
 
 interface BoardProps {
@@ -31,7 +34,7 @@ interface BoardProps {
 
 const Board: React.SFC<BoardProps> = ({ columns, storyDropped }) => (
   <DragDropContext onDragEnd={(result) => storyDropped(result, columns)}>
-  <BoardStyle><BoardTitle>Kanban POC</BoardTitle>{columns.map((c, i) => <ColumnContainer key={c.id} column={c} />)}</BoardStyle>
+  <BoardStyle><BoardTitle>Kanban POC</BoardTitle><CardBoardContainer>{columns.map((c, i) => <ColumnContainer key={c.id} column={c} />)}</CardBoardContainer></BoardStyle>
   </DragDropContext>
 )
 

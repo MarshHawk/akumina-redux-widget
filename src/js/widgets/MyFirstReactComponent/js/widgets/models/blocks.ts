@@ -6,8 +6,7 @@ export interface IUserStory {
     owner: string,
     project: number,
     epic: number,
-    points: number,
-    status: number
+    points: number
   }
   
 export class UserStory implements IUserStory {
@@ -19,5 +18,4 @@ export class UserStory implements IUserStory {
     project!: number;
     epic!:number;
     points!: number;
-    status!: number;
 }
