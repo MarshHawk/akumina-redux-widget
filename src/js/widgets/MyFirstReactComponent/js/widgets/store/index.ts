@@ -2,7 +2,7 @@ import { Store, createStore, combineReducers } from 'redux'
 import { UserStory } from '../models/blocks'
 import { Column } from '../models/board'
 import { userStoryReducer } from '../reducers/userStoryReducer'
-import { columnReducer } from '../reducers/columnReducer'
+import { columnsReducer } from '../reducers/columnsReducer'
 
 export interface KanbanState {
     userStories: UserStory[];
@@ -15,7 +15,7 @@ export function initStore(
     
     const combinedReducer = () => combineReducers({
     userStories: userStoryReducer,
-    columns: columnReducer
+    columns: columnsReducer
   })
 
     const store = createStore(

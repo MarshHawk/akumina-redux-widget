@@ -34,7 +34,8 @@ interface ColumnProps {
   columnStories: UserStory[]
 }
 
-const ColumnComponent: React.SFC<ColumnProps> = ({ column, columnStories }) => (
+
+const ColumnComponent: React.SFC<ColumnProps> = ({ column, columnStories }, {storyDropped}) => (
     <ColumnDiv>
     <ColumnTitle>{column.title}</ColumnTitle>
     <Droppable droppableId={''+column.id}>
