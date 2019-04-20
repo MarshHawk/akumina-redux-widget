@@ -6,7 +6,6 @@ Sample project showing how to use React with Akumina framework - please see Fron
 
 [See MyFirstReactComponent .tsx code](https://github.com/akumina/AkuminaDev/tree/master/FrontEndReact/src/js/widgets/MyFirstReactComponent/js/widgets/MyFirstReactComponent.tsx)
 
-
 [Akumina Widget Builder quick start](https://github.com/akumina/AkuminaDev/wiki/Akumina-Widget-Builder)
 
 ## Install
@@ -107,6 +106,20 @@ npm run deploy
 
 This should have deployed a layout, a page and a sample 'MyFirstReactComponent'
 Browse to http://{tenant}.sharepoint.com/sites/{sitecolllection}/pages/sandbox.aspx
+
+## TO-DO
+
+* Injectable JS style best practices
+* Ensure typesafe components
+* Sample env
+* Deploy option for Unix-based
+* Set up 'app' for local debugging
+* Unit tests! (Of course)
+* Extend boards for features, epics
+* Real persistence
+* Edit boardnpm
+* Add/delete
+* Re-order
 
 #### References
 
