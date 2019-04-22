@@ -25,13 +25,13 @@ Then navigate to your sandbox.aspx page.
 ## TO-DO
 
 * Injectable JS style best practices
-* Ensure typesafe components
+* Ensure typesafe containers/connect/components
 * Deploy option for Unix-based
 * Set up 'app' for local debugging
 * Unit tests! (Of course)
 * Extend boards for features, epics
 * Real persistence
-* Edit boardnpm
+* Edit board
 * Add/delete
 * Re-order
 
