@@ -57,15 +57,7 @@ export class MyFirstReactComponent extends React.Component<IMyFirstReactComponen
     if (this.state.pageLifecycleComplete) {
       return (
         <div>
-          <p>Be pro</p>
-          <Provider
-            store={initStore({
-              userStories: demoInitialUserStories,
-              columns: columns
-            })}
-          >
-            <BoardContainer />
-          </Provider>
+          <p>Chapter two start: On yer marks, get set, go!</p>
         </div>
       );
     } else {
