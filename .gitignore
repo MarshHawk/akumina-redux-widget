@@ -1,5 +1,8 @@
+src/js/widgets/LakaManager/
+
 /node_modules
 /dist
+*.zip
 
 # misc
 .DS_Store

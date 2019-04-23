@@ -1,6 +1,6 @@
 {
   "name": "akumina-redux-widget",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@microsoft/microsoft-graph-types": "^1.8.0",
     "@types/jquery": "^3.3.25",
     "@types/node": "^9.6.40",
     "css-loader": "^1.0.1",
@@ -43,6 +44,7 @@
     "react-beautiful-dnd": "^11.0.0",
     "react-redux": "^7.0.2",
     "redux": "^4.0.1",
+    "redux-saga": "^1.0.2",
     "typesafe-actions": "^4.0.0"
   }
 }

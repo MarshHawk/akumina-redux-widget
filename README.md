@@ -45,5 +45,4 @@ Then navigate to your sandbox.aspx page.
 * [emotion-js](https://github.com/emotion-js/emotion/blob/master/docs/typescript.md)
 * [dotenv](https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786)
 * [Get started with Redux concepts](https://redux.js.org/basics/)
-* [Check out taiga.io!](https://taigaio.github.io)
 * [Colors](https://clrs.cc/)

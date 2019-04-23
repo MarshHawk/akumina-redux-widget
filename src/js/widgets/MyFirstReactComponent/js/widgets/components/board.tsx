@@ -1,10 +1,10 @@
-//import React from 'react'
 import * as React from "react";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 import { IColumn } from "../models/board";
 import styled from "@emotion/styled";
 import "@atlaskit/css-reset";
 import { ColumnContainer } from "../containers/columnContainer";
+import { ManagerContainer } from "../containers/managerContainer";
 
 //#001f3f Navy
 //#7FDBFF Aqua
@@ -23,6 +23,10 @@ const BoardTitle = styled.h1`
   color: #001f3f !important;
 `;
 
+const ManagerBoardContainer = styled.div`
+
+`;
+
 const CardBoardContainer = styled.div`
   display: flex;
 `;
@@ -36,6 +40,7 @@ const Board: React.SFC<BoardProps> = ({ columns, storyDropped }) => (
   <DragDropContext onDragEnd={result => storyDropped(result, columns)}>
     <BoardStyle>
       <BoardTitle>Kanban POC</BoardTitle>
+      <ManagerBoardContainer><ManagerContainer /></ManagerBoardContainer>
       <CardBoardContainer>
         {columns.map((c, i) => (
           <ColumnContainer key={c.id} column={c} />
